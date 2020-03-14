@@ -1,0 +1,17 @@
+**tables**
+
+[*] active_students
+[*] cookbook
+[*] Copy of sreenidhi
+[*] information_schema
+[*] masterdata
+[*] mysql
+[*] palmsureadmindb_krportal
+[*] sreenidhi
+[*] sreenidhi backup(02.11.2019)
+[*] sreenidhi backup(18.05.2019)
+[*] sreenidhibackup(27.11.2017)
+[*] studentadmission
+[*] typo
+[*] typo_dev
+[*] typo_test

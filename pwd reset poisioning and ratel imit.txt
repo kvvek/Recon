@@ -1,0 +1,9 @@
+X-Forwarded-Host: testing-now.000webhostapp.com/.newrelic.com
+X-Forwarded-Host: attack.com/host.com
+Host: example.com?.mavenlink.com
+X-Original-URL:/admin
+X-Originating-Ip:127.0.0.1
+X-Remote-Ip:127.0.0.1
+X-Remote-Addr:127.0.0.1
+X-Client-Ip:127.0.0.1
+X-Forwarded-proto:/admin

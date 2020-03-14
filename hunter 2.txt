@@ -1,0 +1,52 @@
+1.get  subdomains i.e unpopular sites (subbrute)
+2.get subdomains of subdomains (altdns)
+2.check response code of target list using httpstatus.io website
+
+3.https://xsshunter.com/app------->blind xss
+
+4.http://exif.regex.info/exif.cgi----->exif data locations
+
+5.https://github.com/arbazkiraak/web-cache-deception-checker/blob/master/webcache.py------->web cache deception automation tool
+
+6.git repository tools----->gitTools,Githacker,dvcs-ripper tools
+
+7.Apache struts RCE--------->https://www.exploit-db.com/exploits/41570,jexboss tool(https://github.com/joaomatosf/jexboss.git)
+
+8.CMS VULN------->(wordpress,joomla,drupal,vbulletin,magento)[wpscan,joomscan,drupwn,cmsmap,cmsscan]
+
+9.Account provisioning
+
+10.cookie manipulation and broken authentication and session managements
+
+11.Account takeover
+
+12.command injections
+
+13.SSI (SERVER SIDE INCLUDES) Injection
+
+14.SSTI---(PAYLOADALLTHINGS GITHUB,TPLMAP https://github.com/epinna/tplmap)
+
+15.DNSZONETRANSFER
+
+16.Mysql bypass,postgresql bypass aunthenticated
+
+17apache spark Rce
+
+18.phpmyadmin authenticated RCE
+
+19.Adobe coldfusion 
+
+20.Heartbleed,Nginx range filter
+
+21.APPWEB,WEBMIN unauth RCE
+
+22.Apache server http byte range dos
+
+23.shell shock bash RCE
+
+24.Hadoop hunting(hdfsbrowser.py,hadoopsnooper.py)
+
+
+
+
+

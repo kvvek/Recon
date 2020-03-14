@@ -1,0 +1,28 @@
+1.subdomain recon using sublist3r,crt.sh,certspotter
+2.find valid urls using "open multiple urls" extension
+3.open burp and firefox and try diff attacks
+4.Different Attacks like 
+
+(...............................................) 
+|-----------------------------------------------|
+|  *Reflect,DOM,Stored xss,                     |
+|  *Url redirection,         			|
+|  *Sql injection  (HACKBAR,SQL MAP),	        | 
+|  *csv injection                               |
+|  *Template injection                          |  
+|  *CRLF injection	                        |	
+|  *Insecure Cors Misconfiguration,		|
+|  *Spf Records (MXTOOLBOX.COM,KITTERMAN.COM),	|
+|  *subdomaintakeover (HOSTILEBRUTEFORCER),     |
+|  *SSRF,CSRF,                                  |
+|  *Parameter Tampering				|
+|  *Account takeover,				|
+|  *critical file (DIRSEARCH),			|
+|  *Command Injection,				|
+|  *Amazon S3 Buckets,	       			|
+|  *Websites port scanning   			|
+|  *API leaked keys(TruffleHog,SantaHog),       |
+|  *Lfi inclusion  (LFISUITE),			|
+|  *Remote code execution			|
+|-----------------------------------------------|
+(...............................................)

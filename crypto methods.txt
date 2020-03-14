@@ -1,0 +1,21 @@
+crypto methods
+------------------
+*url encode
+*Hexa to ascii
+*ROT13
+*base64 to ascii
+*vigenere_cipher
+*crackstation
+*rsa
+*hertz cipher,caeser cipher,substitution cipher
+*stego-sauras(image stegano)
+
+crypto tools
+-----------------------
+*ROT13.COM
+*QUIPQUIP.COM
+*factordb.com
+*base64encoder.com
+*crackstation.net
+*vigener-cipher
+*rapidtables.com/
