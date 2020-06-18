@@ -11,7 +11,7 @@ https://github.com/OJ/gobuster
 https://github.com/maurosoria/dirsearch
 https://github.com/dxa4481/truffleHog
 https://github.com/michenriksen/aquatone.git
-https://github.com/tomnomnom/httprobe.git
+go get -u github.com/tomnomnom/httprobe
 https://github.com/wpscanteam/wpscan.git
 https://github.com/nahamsec/HostileSubBruteforcer.git
 https://github.com/danielmiessler/SecLists.git
@@ -26,4 +26,4 @@ https://github.com/joaomatosf/jexboss.git
 https://github.com/kost/dvcs-ripper.git
 https://github.com/internetwache/GitTools.git
 https://github.com/WangYihang/GitHacker.git
-
+go get github.com/ffuf/ffuf
