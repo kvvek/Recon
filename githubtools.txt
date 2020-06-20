@@ -24,6 +24,7 @@ https://github.com/joaomatosf/jexboss.git
 https://github.com/kost/dvcs-ripper.git
 https://github.com/internetwache/GitTools.git
 https://github.com/WangYihang/GitHacker.git
+https://github.com/GerbenJavado/LinkFinder.git
 go get github.com/ffuf/ffuf
 go get -u github.com/tomnomnom/assetfinder
 go get github.com/tomnomnom/waybackurls
