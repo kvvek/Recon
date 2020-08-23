@@ -1,7 +1,42 @@
- 
- 
- 
+#------FFUF-----
+fuff()
+{
+ffuf -w /dirsearch/db/$2.txt -u $1 -c 
+ffuf -w /usr/share/dirb/wordlists/$2.txt -u $1 -c 
+}
+#---WECR------
+
+cache()
+{
+python webcache.py $1
+
+}
+crlf()
+{
+crlfuzz -l $1
+}
+
+Arjun()
+{
+cd Arjun
+python3 arjun.py -u $1 --get
+cd
+}
+Linkfinder()
+{
+cd LinkFinder
+python linkfinder.py -i $1 -d
+cd
+}
+
+
 #----- AWS -------
+lazys3()
+{
+cd lazys3
+ruby lazys3.rb $1
+cd
+}
 
 s3ls(){
 aws s3 ls s3://$1
@@ -18,7 +53,7 @@ curl -s $1 | grep path | sed -n "s/.*resource path=\"\(.*\)\".*/\1/p" | tee -a ~
 
 #----- recon -----
 crtndstry(){
-./tools/crtndstry/crtndstry.sh $1
+./crtndstry/crtndstry.sh $1
 }
 
 am(){ #runs amass passively and saves to json
@@ -35,8 +70,14 @@ sudo masscan -p4443,2075,2076,6443,3868,3366,8443,8080,9443,9091,3000,8000,5900,
 }
 sublist3r()
 {
+subfinder   -d  $1 -o $2
+python3 ./Sublist3r/sublist3r.py -d $1 -o add
+cat $2|wc -l
+cat add|wc -l
+cat add >> $2
+rm add
+cat $2|wc -l
 
-python ./Sublist3r/sublist3r.py -d $1 -o $2
 certspotter $1 -a $2
 crtsh $1 -a $2
 
@@ -69,11 +110,11 @@ curl http://ipinfo.io/$1
 
 #------ Tools ------
 dirsearch(){ runs dirsearch and takes host and extension as arguments
-python3 ~/tools/dirsearch/dirsearch.py -u $1 -e $2 -t 50 -b 
+python3 ~/dirsearch/dirsearch.py -u $1 -e $2 -t 50 -b 
 }
 
 sqlmap(){
-python ~/tools/sqlmap*/sqlmap.py -u $1 
+python ~/sqlmap*/sqlmap.py -u $1 
 }
 
 ncx(){
@@ -85,7 +126,7 @@ curl -s https://crt.sh/?q\=%.$1\&output\=json | jq -r '.[].name_value' | sed 's/
 }
 clone()
 {
-for i in $(cat gittools.txt); 
+for i in $(cat githubtools.txt); 
 do
 echo "--------------------******************************************----------"
 echo "cloning"+$i
@@ -101,12 +142,14 @@ cat domain.txt| xargs -n 1 -I{} host -t CNAME {}
 screenshot()
 {
 python ~/webscreenshot/webscreenshot.py -i $2 -r chromium
-./screenshots
+
+cd screenshots
 for i in $(ls);
 do
-echo "<a href="$i">" >>index.html
-echo "<img src="$i" height="100" width="100">" >>index.html
-echo "--------------------------------------------------------------------" >>index1.html
+echo "<a href="$i">" >>$2.html
+echo "<img src="$i" height="100" width="100">" >>$2.html
+echo "--------------------------------------------------------------------" 
 done
+cd
 }
  
