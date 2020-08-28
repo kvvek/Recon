@@ -30,3 +30,4 @@ go get -u github.com/tomnomnom/assetfinder
 go get github.com/tomnomnom/waybackurls
 go get -u github.com/tomnomnom/httprobe
 go get -u github.com/tomnomnom/meg
+go get -u github.com/tomnomnom/anew
