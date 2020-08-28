@@ -31,3 +31,4 @@ go get github.com/tomnomnom/waybackurls
 go get -u github.com/tomnomnom/httprobe
 go get -u github.com/tomnomnom/meg
 go get -u github.com/tomnomnom/anew
+GO111MODULE=auto go get -u -v github.com/projectdiscovery/httpx/cmd/httpx
