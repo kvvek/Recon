@@ -37,3 +37,5 @@ go get github.com/haccer/subjack
 go get github.com/projectdiscovery/subfinder/cmd/subfinder
 go get -u github.com/tomnomnom/unfurl
 go get -u github.com/tomnomnom/qsreplace
+go get github.com/hakluke/hakrawler
+go get -u github.com/jaeles-project/gospider
