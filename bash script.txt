@@ -1,8 +1,13 @@
-#------FFUF-----
+ofjah()
+{
+
+curl -s "https://crt.sh/?q=%25.$1.com&output=json" | jq -r '.[].name_value' | assetfinder -subs-only | sed 's#$#/.git/HEAD#g' | httpx -silent -content-length -status-code 301,302 -timeout 3 -retries 0 -ports 80,8080,443 -threads 500 -title | anew
+
+}
 fuff()
 {
-ffuf -w /dirsearch/db/$2.txt -u $1 -c 
-ffuf -w /usr/share/dirb/wordlists/$2.txt -u $1 -c 
+ffuf -w dirsearch/db/$2.txt -u $1
+ffuf -w usr/share/dirb/wordlists/$2.txt -u $1
 }
 #---WECR------
 
@@ -71,11 +76,15 @@ sudo masscan -p4443,2075,2076,6443,3868,3366,8443,8080,9443,9091,3000,8000,5900,
 sublist3r()
 {
 subfinder   -d  $1 -o $2
+assetfinder $1 -o adds
 python3 ./Sublist3r/sublist3r.py -d $1 -o add
 cat $2|wc -l
 cat add|wc -l
+cat adds|wc -l
 cat add >> $2
+cat adds >> $2
 rm add
+rm adds
 cat $2|wc -l
 
 certspotter $1 -a $2
@@ -133,10 +142,11 @@ echo "cloning"+$i
 git clone $i
 done
 }
-takeover()
-{
 
-cat domain.txt| xargs -n 1 -I{} host -t CNAME {}
+subtakeover()
+ {
+subfinder -d $1 >> hosts | assetfinder -subs-only $1 >> hosts | amass enum -norecursive -noalts -d $1 >> hosts | subjack -w hosts -t 100 -timeout 30 -ssl -c go/src/github.com/haccer/subjack/fingerprints.json -v 3 >> takeover 
+
 
 }
 screenshot()
@@ -152,4 +162,5 @@ echo "--------------------------------------------------------------------"
 done
 cd
 }
+ 
  
