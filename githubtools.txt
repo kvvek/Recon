@@ -39,3 +39,4 @@ go get -u github.com/tomnomnom/unfurl
 go get -u github.com/tomnomnom/qsreplace
 go get github.com/hakluke/hakrawler
 go get -u github.com/jaeles-project/gospider
+GO111MODULE=on go get -u -v github.com/lc/gau
