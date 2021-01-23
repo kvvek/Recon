@@ -41,3 +41,4 @@ go get github.com/hakluke/hakrawler
 go get -u github.com/jaeles-project/gospider
 GO111MODULE=on go get -u -v github.com/lc/gau
 go get -u -v github.com/hahwul/dalfox;
+GO111MODULE=on go get -v github.com/projectdiscovery/subfinder/v2/cmd/subfinder
